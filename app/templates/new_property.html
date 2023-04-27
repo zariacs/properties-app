@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block main %}
+<form
+  method="post"
+  action="{{ url_for('create')}}"
+  enctype="multipart/form-data"
+>
+  {{ form.csrf_token}}
+  <h1 class="form-header display-4">Post New Property</h1>
+  <div class="form-floating">
+    {{ form.title(class='form-control') }} <br />
+    {{ form.title.label(class='form-label') }}
+  </div>
+  <div class="form-floating">
+    {{ form.description(class='form-control') }} <br />
+    {{ form.description.label(class='form-label') }}
+  </div>
+  <div class="new-property-grid">
+    <div class="form-floating">
+      {{ form.bedrooms(class='form-control') }} <br />
+      {{ form.bedrooms.label(class='form-label') }}
+    </div>
+    <div class="form-floating">
+      {{ form.bathrooms(class='form-control') }} <br />
+      {{ form.bathrooms.label(class='form-label') }}
+    </div>
+    <div class="form-floating">
+      {{ form.price(class='form-control') }} <br />
+      {{ form.price.label(class='form-label') }}
+    </div>
+    <div class="form-floating">
+      {{ form.type(class='form-select')}} <br />
+      {{ form.type.label(class='form-label') }}
+    </div>
+  </div>
+  <div class="form-floating">
+    {{ form.location(class='form-control') }} <br />
+    {{ form.location.label(class='form-label') }}
+  </div>
+
+  <div class="mb-3">
+    {{ form.photo.label(class='form-label', for='formFile') }} <br />
+    {{ form.photo(class='form-control', type='file', id='formFile') }}
+  </div>
+
+  <button class="btn btn-primary" type="submit">Post Property</button>
+</form>
+
+{% endblock %}

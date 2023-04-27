@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block main %}
+<div class="single-property-container">
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="{{url_for('get_image', filename=property.photo)}}"
+          class="img-fluid rounded-start"
+          id="individual_property_img"
+          alt="Photo of {{property.title}}"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{property.title}}</h5>
+          <div>{{property.price}} &nbsp; &nbsp; {{property.type}}</div>
+          <p class="card-text">{{property.description}}</p>
+          <p class="card-text">
+            {{property.bedrooms}} Bedrooms &nbsp; &nbsp; {{property.bathrooms}}
+            Bathrooms
+          </p>
+          <p>{{property.location}}</p>
+          <a href="#" class="btn btn-primary">Email Realtor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

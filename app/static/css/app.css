@@ -1,0 +1,49 @@
+body {
+    padding-top: 5rem;
+}
+
+.new-property-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5em;
+}
+
+.form-header {
+    /* Gives cushioning below form headers */
+    margin-bottom: 0.75em;
+}
+
+.btn {
+    /* Gives cushioning to the top of form submit buttons */
+    margin-top: 0.75em;
+}
+
+ul {
+    /* Removes bullet points from all-properties grid */
+    list-style-type: none
+}
+
+.card-img-top {
+    /* Keeps the all-properties images as a square */
+    width: 18rem;
+    height: 18rem;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.properties-title {
+    /* Gives cushioning below the properties heading. */
+    margin-bottom: 2rem;
+}
+
+#individual_property_img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-property-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
